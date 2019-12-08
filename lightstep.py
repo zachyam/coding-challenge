@@ -25,8 +25,7 @@ class Solution:
         error_count = max(self.operation_to_error_count.items(), key=operator.itemgetter(1))[1]
 
         print('Operation ' + operation + ' has the highest error count totalling ' + str(error_count))
-        return (max(self.operation_to_error_count.items(), key=operator.itemgetter(1))[0],
-                max(self.operation_to_error_count.items(), key=operator.itemgetter(1))[1])
+        return (operation, error_count)
 
     # This method returns the transaction that has the biggest difference
     # between the earliest START and latest END in its messages
